@@ -2,7 +2,7 @@ const Express = require('express');
 const FS = require('fs');
 const Path = require('path');
 
-const PORT = 80;
+const PORT = process.env.port || 8080;
 
 const express = Express();
 express.use(Express.json()); // application/json
