@@ -3,11 +3,13 @@ const FS = require('fs');
 const Path = require('path');
 
 const PORT = process.env.PORT || 8080;
-
 const express = Express();
+
+const dbFile = Path.join(__dirname,'/db/db.json');
+
 express.use(Express.json()); // application/json
 express.use(Express.urlencoded({ extended: true })); // application/x-www-form-urlencoded
-express.use(Express.static('public')); // specify root directory for serving static assets
+express.use(Express.static(__dirname + '/public')); // specify root directory for serving static assets
 
 express.get("/notes", function (request, response) {
     response.sendFile(Path.join(__dirname, '/public/notes.html'));
@@ -15,7 +17,7 @@ express.get("/notes", function (request, response) {
 
 // return all saved notes in db.json as JSON
 express.get("/api/notes", function (request, response) {
-    let db = JSON.parse(FS.readFileSync("./db/db.json"));
+    let db = JSON.parse(FS.readFileSync(dbFile));
     for (let i = 0; i < db.length; ++i) {
         db[i].id = i+1;
     }
@@ -25,9 +27,9 @@ express.get("/api/notes", function (request, response) {
 // add note to the db.json file
 // return the new note to the client.
 express.post("/api/notes", function (request, response) {
-    let db = JSON.parse(FS.readFileSync("./db/db.json"));
+    let db = JSON.parse(FS.readFileSync(dbFile));
     db.push(request.body);
-    FS.writeFileSync("./db/db.json", JSON.stringify(db));
+    FS.writeFileSync(dbFile, JSON.stringify(db));
 
     response.json({
         "title" : request.body.title,
@@ -44,7 +46,7 @@ express.delete("/api/notes/:id", function (request, response) {
         return;
     }
 
-    let db = JSON.parse(FS.readFileSync("./db/db.json"));
+    let db = JSON.parse(FS.readFileSync(dbFile));
 
     if (id === 0 || id > db.length) {
         response.sendStatus(403); // forbidden ie. well formed but incorrect
@@ -53,7 +55,7 @@ express.delete("/api/notes/:id", function (request, response) {
 
     db = [ ...db.slice(0,id-1), ...db.slice(id) ]; 
 
-    FS.writeFileSync("./db/db.json", JSON.stringify(db));
+    FS.writeFileSync(dbFile, JSON.stringify(db));
 
     response.sendStatus(200); // ok
 });
