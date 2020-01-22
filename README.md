@@ -1,4 +1,4 @@
-# note-taker
+# employee-tracker
 
 ## Getting Started
 
@@ -11,13 +11,13 @@ space to unzip the contents of the repository.
 
 ### Installing
 
-1) Visit https://github.com/redmarmaduke/note-taker.
+1) Visit https://github.com/redmarmaduke/employee-tracker.
 2) Select the Clone or Download button
 3) Select the most appropriate format/method for download. 
 ```
 ex. using the command line git tool
 
-git clone https://github.com/redmarmaduke/note-taker.git
+git clone https://github.com/redmarmaduke/employee-tracker.git
 
 ```  
 npm install
