@@ -29,10 +29,6 @@ These instructions will get you a copy of the project up and running on your loc
 * [NodeJS](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
-### Prerequisites
-
-* [NodeJS](https://nodejs.org)
-
 ### Installing
 
 ```
