@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Toy note taker application where I built the code to handle event handling for the page including note creation and deletion.",
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon server.js",
@@ -9,7 +9,7 @@
     "start": "if-env NODE_ENV=\"production\" && npm run start:prod || npm run start:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Manuel Nunes <manuel_s_nunes@yahoo.com> (https://github.com/redmarmaduke)",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
