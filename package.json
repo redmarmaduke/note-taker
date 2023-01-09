@@ -16,7 +16,6 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
-    "serve": "^14.1.2"
+    "nodemon": "^2.0.20"
   }
 }

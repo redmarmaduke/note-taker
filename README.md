@@ -5,7 +5,7 @@
 
 [![alt](https://img.shields.io/badge/express-%5E4.18.2-orange)](http://expressjs.com/)[![alt](https://img.shields.io/badge/if--env-%5E1.0.4-orange)](https://github.com/ericclemmons/if-env#readme)
 
-[![alt](https://img.shields.io/badge/nodemon-%5E2.0.20-yellow)](https://nodemon.io) [![alt](https://img.shields.io/badge/serve-%5E14.1.2-yellow)](https://github.com/vercel/serve#readme) 
+[![alt](https://img.shields.io/badge/nodemon-%5E2.0.20-yellow)](https://nodemon.io)
 
 
 
