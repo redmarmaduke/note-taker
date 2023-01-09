@@ -29,30 +29,21 @@ These instructions will get you a copy of the project up and running on your loc
 * [NodeJS](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
+### Prerequisites
+
+* [NodeJS](https://nodejs.org)
+
 ### Installing
 
-1) Visit https://github.com/redmarmaduke/note-taker.
-2) Select the Clone or Download button which will place the git link in your clipboard.
-3) Using the command line git tool the installation would be as follows:
-```
-git clone https://github.com/redmarmaduke/note-taker.git
-
+\`\`\`
 npm install
-```  
+\`\`\`
 
-7) Start up the server:
+### Usage
 
-```
+\`\`\`
 npm start
-```
-or
-```
-node server.js
-```
-
-
-
-8) Start up a web browser and access URL: "http://localhost:8080"
+\`\`\`
 
 ## Authors
 
